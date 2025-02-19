@@ -1,0 +1,143 @@
+/* Parte do escopo */
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ddd;
+    color: #000;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+}
+
+.niver {
+    font-size: 70%;
+}
+
+/* ajustar a imagem */
+img {
+    width: 300px;
+    height: 45%;
+}
+
+.descricao {
+    width: 300px;
+}
+
+h2 {
+    margin-bottom: 5px;
+}
+
+.duracao {
+    width: 300px;
+    margin-top: 10px;
+}
+
+.barra {
+    width: 300px;
+    height: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+/* Estilizando o input range (barra de progresso) */
+#barraProgresso {
+    -webkit-appearance: none; /* Remove o estilo padrão do navegador */
+    width: 100%;
+    height: 6px;
+    background: transparent;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    position: relative;
+    z-index: 2;
+}
+
+#barraProgresso:hover {
+    opacity: 1;
+}
+
+/* Estilo do "track" (fundo da barra) */
+#barraProgresso::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    background: #000;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+
+#barraProgresso::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    background: #000;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+
+/* Estilo do "thumb" (bolinha da barra) */
+#barraProgresso::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    margin-top: -8px; /* Ajuste para alinhar com a barra */
+}
+
+#barraProgresso::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    margin-top: -7px; /* Ajuste para alinhar com a barra */
+}
+
+/* Ponto da barra de progresso */
+.ponto {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    pointer-events: none; /* Impede que o ponto interfira com o input */
+}
+
+.tempo {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.player {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.botao-play, .botao-pause {
+    font-size: 50px;
+}
+
+.setas {
+    font-size: 40px;
+}
+
+.botao-pause {
+    display: none;
+}
